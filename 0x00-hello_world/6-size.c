@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
     char c_char;
     int c_int;
@@ -13,5 +13,6 @@ int main()
     printf("Size of a long int : %lu byte(s)\n", sizeof(c_long));
     printf("Size of a long long int : %lu byte(s)\n", sizeof(c_long_long));
     printf("Size of a float : %lu byte(s)\n", sizeof(c_float));
-    return 0;
+
+    return (0);
 }
