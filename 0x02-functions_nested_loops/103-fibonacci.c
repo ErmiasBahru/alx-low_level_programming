@@ -12,7 +12,7 @@ int main(void)
 	int val;
 
 	sum = pri + sec;
-	while (sum <= 4000000)
+	while (sum <= 89)
 	{
 		val = sum % 2;
 		sum = pri + sec;
