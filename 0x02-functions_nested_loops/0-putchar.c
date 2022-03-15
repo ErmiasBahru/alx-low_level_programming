@@ -10,7 +10,7 @@ int main(void)
 
 	int c;
 
-	for (c = 0; c < 7; c++)
+	for (c = 0; c < 8; c++)
 	{
 		_putchar(ermias[c]);
 	}
