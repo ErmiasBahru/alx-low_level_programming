@@ -6,7 +6,7 @@
  **/
 int main(void)
 {
-	char ermias[] = "Ermias";
+	char ermias[] = "abcdefgh";
 
 	int c;
 
