@@ -1,12 +1,19 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * print_most_numbers - prints the numbers
  *
- * Return: Always 0.
  */
-int main(void)
+void print_most_numbers(void)
 {
-	print_most_numbers();
-	return (0);
+	int i;
+
+	for (i = '0'; i <= '9'; i++)
+	{
+		if (i != '2' &&  i != '4')
+		{
+			_putchar(i);
+		}
+	}
+	_putchar('\n');
 }
