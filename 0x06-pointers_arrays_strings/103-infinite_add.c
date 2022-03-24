@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * infinite_add - function that adds two numbers
- *
+ * infinite_add - function that adds two numbers.
+ * @n1: Pointer to the first character of number 1
+ * @n2: Pointer to the first character of number 2
  * @r: Buffer where to write the result
  * @n: Buffer size
  *
