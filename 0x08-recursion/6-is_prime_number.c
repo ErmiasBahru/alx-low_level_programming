@@ -18,7 +18,8 @@ int is_prime_num(int n, int x)
 	return (is_prime_num(n, x + 1));
 }
 /**
- * is_prime_number - function that returns 1 if the input integer is a prime number, otherwise return 0.
+ * is_prime_number - function that returns 1 if the input integer
+ * is a prime number, otherwise return 0
  * @n: num
  * Return: output
  */
