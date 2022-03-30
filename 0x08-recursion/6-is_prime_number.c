@@ -24,5 +24,5 @@ int is_prime_num(int n, int x)
  */
 int is_prime_number(int n)
 {
-	return (is_prime_number_aux(n, 2));
+	return (is_prime_num(n, 2));
 }
