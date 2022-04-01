@@ -1,1 +1,0 @@
-ALX static lib
