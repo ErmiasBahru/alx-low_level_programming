@@ -1,8 +1,8 @@
 #include "3-calc.h"
 /**
   *main - check arguments
-  *@argc: argument 1
-  *@argv: argument 2
+  *@argc: argument count
+  *@argv: argument vector
   *
   *Return: error if number of arguments is wrong
   */
