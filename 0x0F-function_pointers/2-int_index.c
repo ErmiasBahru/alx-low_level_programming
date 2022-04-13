@@ -3,7 +3,7 @@
   *@array: array of integers.
   *@size: number of elements in array.
   *@cmp: pointer to function used to compare values.
-  *
+  *Return: -1 If no element matches
   */
 int int_index(int *array, int size, int (*cmp)(int))
 {
