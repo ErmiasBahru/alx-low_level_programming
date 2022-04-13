@@ -2,7 +2,7 @@
 /**
   *main - check arguments
   *@argc: argument count
-  *@argv: argument vector
+  *@argv: argument vector.
   *
   *Return: error if number of arguments is wrong
   */
@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-  
+	/* check if theres only one operator*/
 	if (argv[2][1] != '\0')
 	{
 		printf("Error\n");
@@ -36,3 +36,4 @@ int main(int argc, char *argv[])
 	printf("%d\n", res);
 	return (0);
 }
+
