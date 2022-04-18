@@ -4,55 +4,50 @@
 #include <unistd.h>
 #include "main.h"
 /**
- * _printf - Function that produces output according to a format.
- * @format: Is a character string.
- * The format string is composed of zero or more directives.
- * Returns: the number of characters printed
- * (excluding the null byte used to end output to strings)
- */
+ * _printf - function printf selector
+ * @format: format
+ * Return: Number of printed characters excluding the null
+ **/
 int _printf(const char *format, ...)
 {
-	op_t opl[] = {
-		{"c", op_c},
-		{"s", op_s},
-		{"%", op_percent},
-		{"d", op_d},
-		{"i", op_d},
-		{"u", op_u},
-		{"o", op_o},
-		{"x", op_x},
-		{"X", op_X},
-		{"p", op_p},
-		{"r", op_r}
-	};
-	va_list al;
-	int x;
-	int y;
-	int length = 0;
+	int con1 = 0, con2 = 0, flag, lon = 0;
+	va_list arg;
 
-	va_start(al, format);
-	x = 0;
-	while (format[x])
+	cf_t print[] = { {"c", pc}, {"s", ps}, {"d", pd}, {"i", pi}, {NULL, NULL} };
+
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
+	va_start(arg, format);
+	while (format[con1] != '\0')
 	{
-		if (format[x] == '%')
+		if (format[con1] == '%' && format[con1 + 1] != '%')
 		{
-			y = 0;
-			while (y < 11)
+			con2 = 0;
+			flag = 0;
+			while (print[con2].p != NULL)
 			{
-				if (opl[y].op[0] == format[x + 1])
+				if (format[con1 + 1] == print[con2].print[0])
 				{
-					length += opl[y].func(al);
-					x++;
-				}
-				y++;
+					lon = lon + print[con2].p(arg);
+					flag = 1;
+					con1++; }
+				con2++;
 			}
+			if (flag == 0)
+			{
+				_putchar (format[con1]);
+				lon = lon + 1; }
 		}
+		else if (format[con1] == '%' && format[con1 + 1] == '%')
+		{
+			_putchar ('%');
+			con1++;
+			lon = lon + 1; }
 		else
 		{
-			length += _putchar(format[x]);
-		}
-		x++;
-	}
-	va_end(al);
-	return (length);
+			_putchar (format[con1]);
+			lon = lon + 1; }
+		con1++;	}
+	va_end(arg);
+	return (lon);
 }
