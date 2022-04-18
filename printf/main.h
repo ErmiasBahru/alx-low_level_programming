@@ -6,6 +6,12 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+/**
+ * struct cformat - Short description
+ * @print: argument to print
+ * @p: Pointer
+ */
+
 typedef struct cformat
 {
 char *print;
