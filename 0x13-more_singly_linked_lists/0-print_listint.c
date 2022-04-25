@@ -2,7 +2,7 @@
 /**
  * print_listint - prints all the elements of listint_t
  * @h: takes in a const struct type *h
- * Return: returns the counter
+ * Return: the number of nodes
  */
 size_t print_listint(const listint_t *h)
 {
