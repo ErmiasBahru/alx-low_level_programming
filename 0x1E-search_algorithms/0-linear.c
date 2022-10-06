@@ -10,6 +10,7 @@
  * Return: first index where @value is located, (-1) if @array is NULL or
  * @value is not found in @array
  */
+
 int linear_search(int *array, size_t size, int value)
 {
 	int i;
